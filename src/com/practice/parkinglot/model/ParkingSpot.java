@@ -10,7 +10,18 @@ public class ParkingSpot extends BaseModel {
     private int number;
 
     public static List<ParkingSpot> getParkingSpotByParkingLot(ParkingLot parkingLot) {
-        return new ArrayList<>();
+        List<ParkingSpot> parkingList = new ArrayList<>(10);
+        //int i = 1;
+        for(int i=0;i<10;i++){
+            ParkingSpot ps = new ParkingSpot();
+            ps.setParkingSpotStatus(ParkingSpotStatus.AVAILABLE);
+            ps.setNumber(i++);
+            List<VehicleType> supportedVehicle = List.of(new VehicleType[]{VehicleType.LARGE, VehicleType.MEDIUM, VehicleType.SMALL});
+            ps.setSupportedVehicleTypes(supportedVehicle);
+            parkingList.add(ps);
+        }
+
+        return parkingList;
     }
 
     public ParkingSpotStatus getParkingSpotStatus() {

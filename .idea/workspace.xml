@@ -4,24 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81990e31-4936-459d-b0d2-09cc93382f86" name="Changes" comment="Adding Models">
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/ObjectRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/controller/TicketCotroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/dto/GenerateTicketRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/dto/GenerateTicketResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/dto/ResponseStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/exception/ParkingSpotAvailableException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/repository/ParkingLotRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/repository/TicketRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/repository/VehicleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/service/GateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/service/TicketService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/service/VehicleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/strategy/spotassignment/RandomSpotAssignmentStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/strategy/spotassignment/SpotAssignmentStrategy.java" afterDir="false" />
+    <list default="true" id="81990e31-4936-459d-b0d2-09cc93382f86" name="Changes" comment="Adding Remaining Code.">
+      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/repository/GateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/strategy/feecalculation/FeeCalculationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/strategy/feecalculation/RandomFeesGenerationStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParkingLot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParkingLot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/practice/parkinglot/controller/TicketCotroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/controller/TicketCotroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/practice/parkinglot/model/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/model/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/practice/parkinglot/model/ParkingSpot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/model/ParkingSpot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/practice/parkinglot/service/GateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/service/GateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/practice/parkinglot/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/practice/parkinglot/service/TicketService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +57,20 @@
       <recent name="com.practice.parkinglot.model" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="ParkingLot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ParkingLot" />
+      <module name="parkinglot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ParkingLot" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,12 +94,35 @@
       <option name="project" value="LOCAL" />
       <updated>1686289709759</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adding Remaining Code.">
+      <created>1686305390127</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686305390127</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Adding Models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Models" />
+    <MESSAGE value="Adding Remaining Code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Remaining Code." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/practice/parkinglot/service/GateService.java</url>
+          <line>17</line>
+          <properties class="com.practice.parkinglot.service.GateService" method="getGateById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

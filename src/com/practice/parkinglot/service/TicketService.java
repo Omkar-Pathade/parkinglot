@@ -33,7 +33,7 @@ public class TicketService {
     public Ticket generateTicket(String vehicleNumber, VehicleType vehicleType, Long gateId) throws ParkingSpotAvailableException {
         Vehicle vehicle = vehicleService.getVehicleByNumber(vehicleNumber);
         if (vehicle == null) {
-            vehicleService.registerVehicle(vehicleNumber, vehicleType);
+            vehicle = vehicleService.registerVehicle(vehicleNumber, vehicleType);
         }
 
         Gate gate = gateService.getGateById(gateId);
@@ -48,6 +48,6 @@ public class TicketService {
         }
 
         Ticket savedTicket = ticketRepository.save(temp);
-        return null;
+        return temp;
     }
 }

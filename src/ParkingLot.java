@@ -28,8 +28,12 @@ public class ParkingLot {
         generateTicketRequest.setVehicleNo("MH 06 AM 2001");
         generateTicketRequest.setGateId(1L);
         GenerateTicketResponse response = ticketCotroller.generateTicket(generateTicketRequest);
-        System.out.println(response);
-
+        System.out.println("Response Status : " + response.getResponseStatus());
+        System.out.println("Entry Time : " + response.getTicket().getEntryTime());
+        System.out.println("Gate ID : " + response.getTicket().getGate().getId());
+        System.out.println("Operator Name: " + response.getTicket().getOperator().getName());
+        System.out.println("Vehicle Type : " + response.getTicket().getVehicle().getVehicleType());
+        System.out.println("Vehicle Number : " + response.getTicket().getVehicle().getNumber());
 
     }
 }

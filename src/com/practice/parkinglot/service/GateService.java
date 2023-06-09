@@ -1,15 +1,21 @@
 package com.practice.parkinglot.service;
 
 import com.practice.parkinglot.model.Gate;
-import com.practice.parkinglot.model.GateType;
-import com.practice.parkinglot.model.Operator;
+import com.practice.parkinglot.repository.GateRepository;
 
 public class GateService {
 
-    public Gate getGateById(long id){
-        Gate tempGate = new Gate();
-        tempGate.setGateType(GateType.ENTRY);
-        tempGate.setOperator(new Operator());
-        return tempGate;
+    private GateRepository gateRepository;
+
+    public GateService() {
+        this.gateRepository = new GateRepository();
+    }
+
+    public GateService(GateRepository gateRepository) {
+        this.gateRepository = gateRepository;
+    }
+
+    public Gate getGateById(long id) {
+        return gateRepository.getGateById(id);
     }
 }

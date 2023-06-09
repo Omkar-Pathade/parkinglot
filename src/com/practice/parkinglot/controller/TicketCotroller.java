@@ -12,6 +12,7 @@ public class TicketCotroller {
     private TicketService ticketService;
 
     public TicketCotroller(TicketService ticketService) {
+        this.ticketService = ticketService;
     }
 
     public GenerateTicketResponse generateTicket(GenerateTicketRequest generateTicketRequest) {
