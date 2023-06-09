@@ -1,5 +1,6 @@
 package com.practice.parkinglot.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ParkingSpot extends BaseModel {
@@ -7,6 +8,10 @@ public class ParkingSpot extends BaseModel {
     private ParkingFloor parkingFloor;
     private List<VehicleType> supportedVehicleTypes;
     private int number;
+
+    public static List<ParkingSpot> getParkingSpotByParkingLot(ParkingLot parkingLot) {
+        return new ArrayList<>();
+    }
 
     public ParkingSpotStatus getParkingSpotStatus() {
         return parkingSpotStatus;
